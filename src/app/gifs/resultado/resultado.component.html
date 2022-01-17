@@ -1,1 +1,21 @@
-<p>resultado works!</p>
+<!-- <ul>
+  <li *ngFor="let gif of resultado">
+    {{ gif.title}}
+  </li>
+</ul> -->
+
+<div class="row">
+    <div class="col-md-4 col-sm-6" *ngFor="let gif of resultado">
+      <div class="card">
+        <img [src]="gif.images.downsized_medium.url"
+              [alt]="gif.title">
+        <div class="card-body">
+          <div class="card-text">
+            <!-- {{ gif.title }} -->
+            <!-- {{  }} -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+</div>
