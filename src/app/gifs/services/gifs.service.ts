@@ -40,11 +40,9 @@ export class GifsService {
 
     this.http.get<SearchGIFResponse>(`https://api.giphy.com/v1/gifs/search?api_key=2PmbzWsUbXDBeCvQLxNCCUgWgphgspOA&q=${ query }&limit=10`)
       .subscribe ( ( resp ) => {
-        console.log(resp.data);
         this.resultados = resp.data;
         localStorage.setItem('resultados', JSON.stringify( this.resultados ));
       })
 
-    console.log(this._historial);
   }
 }
